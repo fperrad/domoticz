@@ -12,7 +12,7 @@ RUN apt-get update -qq \
       git \
       libcurl4-gnutls-dev \
       libjsoncpp-dev \
-      liblua5.3-dev \
+      liblua5.4-dev \
       libminizip-dev \
       libmosquitto-dev \
       libsqlite3-dev \

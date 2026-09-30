@@ -1,10 +1,10 @@
 In order to run the integration tests from the command line you have to
 
 
-## Install Lua5.3 , luarocks-3.2.1, nodejs and npm on da Pi 
+## Install Lua5.4 , luarocks-3.2.1, nodejs and npm on da Pi 
 
-# sudo apt remove -y lua5.1 liblua5.1-dev lua5.2 liblua5.2-dev lua5.3 liblua5.3-dev 
-# sudo apt install lua5.3 liblua5.3-dev 
+# sudo apt remove -y lua5.1 liblua5.1-dev lua5.2 liblua5.2-dev lua5.3 liblua5.3-dev lua5.4 liblua5.4-dev
+# sudo apt install lua5.4 liblua5.4-dev 
 
 # sudo wget https://luarocks.org/releases/luarocks-3.2.1.tar.gz
 # sudo tar zxpfv luarocks-3.2.1.tar.gz

@@ -483,26 +483,26 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 # LUA
 #
 IF(USE_LUA_STATIC)
-  # Debian/Ubuntu: liblua5.3.a ; Alpine: liblua-5.3.a
-  find_library(LUA_LIBRARIES NAMES liblua5.3.a liblua-5.3.a)
+  # Debian/Ubuntu: liblua5.4.a ; Alpine: liblua-5.4.a
+  find_library(LUA_LIBRARIES NAMES liblua5.4.a liblua-5.4.a)
 ELSE(USE_LUA_STATIC)
-  # Debian/Ubuntu provide the unversioned "liblua5.3.so" symlink via the -dev
-  # package, while Alpine ships the versioned "liblua-5.3.so.0" soname.
-  find_library(LUA_LIBRARIES NAMES liblua5.3.so liblua-5.3.so.0 liblua5.3.so.0 liblua-5.3.so)
+  # Debian/Ubuntu provide the unversioned "liblua5.4.so" symlink via the -dev
+  # package, while Alpine ships the versioned "liblua-5.4.so.0" soname.
+  find_library(LUA_LIBRARIES NAMES liblua5.4.so liblua-5.4.so.0 liblua5.4.so.0 liblua-5.4.so)
 ENDIF(USE_LUA_STATIC)
-find_path(LUA_INCLUDE_DIRS NAMES lua5.3/lua.h)
+find_path(LUA_INCLUDE_DIRS NAMES lua5.4/lua.h)
 IF(LUA_LIBRARIES AND LUA_INCLUDE_DIRS)
   MESSAGE(STATUS "LUA library found at: ${LUA_LIBRARIES}")
-  INCLUDE_DIRECTORIES(${LUA_INCLUDE_DIRS}/lua5.3)
+  INCLUDE_DIRECTORIES(${LUA_INCLUDE_DIRS}/lua5.4)
 ELSE(LUA_LIBRARIES AND LUA_INCLUDE_DIRS)
   # try using find_package()
-  find_package(Lua "5.3" REQUIRED)
+  find_package(Lua "5.4" REQUIRED)
   IF(LUA_FOUND)
     MESSAGE(STATUS "LUA library found at  : ${LUA_LIBRARIES}")
     MESSAGE(STATUS "LUA includes found at : ${LUA_INCLUDE_DIR}")
     INCLUDE_DIRECTORIES(${LUA_INCLUDE_DIR})
   ELSE(LUA_FOUND)
-    MESSAGE(FATAL_ERROR "LUA 5.3 not found! use sudo apt-get install liblua5.3-dev")
+    MESSAGE(FATAL_ERROR "LUA 5.4 not found! use sudo apt-get install liblua5.4-dev")
   ENDIF(LUA_FOUND)
 ENDIF(LUA_LIBRARIES AND LUA_INCLUDE_DIRS)
 

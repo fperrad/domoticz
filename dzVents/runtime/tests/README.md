@@ -1,6 +1,6 @@
 In order to run the tests from the command line you have to
 
-* Install lua 5.3
+* Install lua 5.4
 * Install luarocks (see below)
 * Install busted: `luarocks install busted`
 * Install luacov: `luarocks install luacov`
@@ -25,9 +25,9 @@ Then open `luacov.report.out`
 
 
 
-## luarocks 5.3 on da Pi (not completely described yet !! )
+## luarocks 5.4 on da Pi (not completely described yet !! )
 
-* sudo apt-get install liblua5.3-dev lua5.3 luarocks
+* sudo apt-get install liblua5.4-dev lua5.4 luarocks
 
 * sudo luarocks install busted
 * sudo luarocks install lodash
